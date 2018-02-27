@@ -13,7 +13,7 @@
 
  <body>
   <p id="hello">
-  An Example Plot
+  An Example Day Plot
   </p>
   <div id="graphdiv"></div>
 <script type="text/javascript">
@@ -24,6 +24,26 @@
 
     // CSV or path to a CSV file.
     "data/todaysData.csv",
+    
+    {
+    showRangeSelector: true
+    }
+
+  );
+</script>
+
+  <p id="graph2">
+  An Example of a Monthly Plot
+  </p>
+  <div id="graph2div"></div>
+<script type="text/javascript">
+  g2 = new Dygraph(
+
+    // containing div
+    document.getElementById("graph2div"),
+
+    // CSV or path to a CSV file.
+    "data/februaryData.csv",
     
     {
     showRangeSelector: true
