@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ATOC</title>
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <script type="text/javascript" src="dygraph.js"></script>
+  <link rel="stylesheet" src="dygraph.css" />
+
+</head>
+
+ <body>
+  <p id="hello">
+  An Example Plot for February
+  </p>
+  <div id="graphdiv"></div>
+<script type="text/javascript">
+  g = new Dygraph(
+
+    // containing div
+    document.getElementById("graphdiv"),
+
+    // CSV or path to a CSV file.
+    "data/februaryData.csv",
+    
+    {
+    showRangeSelector: true
+    }
+
+  );
+</script>
+</body>
