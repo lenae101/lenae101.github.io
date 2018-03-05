@@ -24,7 +24,7 @@ body {
 	height: auto;
 	text-align: right;
 	padding: 3% 4%;
-	background: url(/*Add the banner image filename here*/) top left no-repeat;
+	background: url(images/banner.html) top left no-repeat;
 }
 	#header h1, #header a:link, #header a:visited {
 		font-size: 150%;
