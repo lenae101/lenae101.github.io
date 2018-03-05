@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Generic Title</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="As Many, Relevant, Keywords, as you, can think of" />
+  <meta name="description" content="A nice description of the page" />
+  <link href="oswd2.css" rel="stylesheet" type="text/css" title="OSWD2 Style" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+<div id="container"> <!-- <DIV #1> -->
+
+<a href="https://VeronicaAM.github.io"><img src="images/banner.jpg" width="100%" /></a><br />
+
+	<div id="header"> <!-- <DIV #2> -->
+		<h1><a href="index.html"><font color='white'>Title</font></a></h1><br />
+		<h2><font color='white'>Subtitle</font></h2>
+	</div>
+
+	<div id="core_container"> <!-- <DIV #3> -->
+	  <div id="core_left"> <!-- <DIV #4> -->
+		  <h3>A sidebar title</h3>
+			<p align="justify">Text, explaining what sort of graphs we're linking to.<br/></p>
+			<p><a href="graph1.html"><img src="images/graph1_mini.png" alt="" width="280" /></a>Click to see an interactive plot!<br/><br/></p>
+		  <h3>A sidebar title</h3>
+			<p align="justify">Text.<br/></p>
+			<p><a href="graph2.html"><img src="images/graph2_mini.png" alt="" width="280" /></a>Click to see another graph<br/><br/></p>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+
+
+
+	  </div>
+
+	  <div id="core_right"> <!-- <DIV #5> -->
+		<div id="navcontainer">
+			<ul id="navlist">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="graph1.html">Graph 1</a></li>
+            <li><a href="graph2.html">Graph 2</a></li>
+			<li><a href="graph3.html"id="current">Graph 3</a></li>
+			<li><a href="graph4.html">Graph 4</a></li>
+			<li><a href="an_explanatory_page.html">Data Source</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+
+  <p id="graph2">
+  An Example of a Monthly Plot
+  </p>
+  <div id="graph2div"></div>
+<script type="text/javascript">
+  g2 = new Dygraph(
+
+    // containing div
+    document.getElementById("graph2div"),
+
+    // CSV or path to a CSV file.
+    "data/feb_humidity.csv",
+    
+    {
+    showRangeSelector: true
+    }
+
+  );
+</script>
+
+	  </div>
+	</div>
+	<div id="footer">
+    <!--If there is a footer, put it here!-->   
+    </div>
+</div>
+</body>
+</html>
