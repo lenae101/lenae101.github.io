@@ -56,7 +56,7 @@
 		</div>
 
   <p id="graph2">
-  An Example of a Monthly Plot with Multiple Data Streams
+  An Example of a Monthly Plot with Multiple Data Columns
   </p>
   <div id="graph2div"></div>
 <script type="text/javascript">
@@ -69,12 +69,29 @@
     "data/JanOne_windspeed.csv",
     
     {
-    showRangeSelector: true
-    g.visibility() = true,true
+    showRangeSelector: true,
+    //Checkbox for multiple columns of data
+    visibility() = [true,true]
     }
 
   );
+  //Checkbox functions
+  change(el){
+  g2.visibility
+  function change(el){
+    g2.setVisibility(parseInt(el.id), el.checked);
+    }
+  }
 </script>
+
+<!--Labels for checkbox-->
+<p>
+<input type="checkbox" id="0" checked onclick="change(this)">
+<label for="0"> A</label>
+<br>
+<input type="checkbox" id="1" checked onclick="change(this)">
+<label for="1"> B</label>
+<p>
 
 <!-- <script type="text/javascript">
   g2 = new Dygraph(
@@ -100,3 +117,4 @@
 </div>
 </body>
 </html>
+
