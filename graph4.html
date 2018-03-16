@@ -49,14 +49,14 @@
 			<li><a href="graph1.html">Humidity</a></li>
             <li><a href="graph2.html">Temperature</a></li>
 			<li><a href="graph3.html">Pressure</a></li>
-			<li><a href="graph4.html">Wind Direction</a></li>
+			<li><a href="graph4.html">Wind Speed</a></li>
 			<li><a href="an_explanatory_page.html">Data Source</a></li>
 			<li><a href="contact.html">Contact</a></li>
 			</ul>
 		</div>
 
   <p id="graph2">
-  An Example of a Monthly Plot
+  An Example of a Monthly Plot with Multiple Data Streams
   </p>
   <div id="graph2div"></div>
 <script type="text/javascript">
@@ -66,14 +66,31 @@
     document.getElementById("graph2div"),
 
     // CSV or path to a CSV file.
-    "data/JanOne_wind_direction.csv",
+    "data/JanOne_windspeed.csv",
+    
+    {
+    showRangeSelector: true
+    g.visibility() = true,true
+    }
+
+  );
+</script>
+
+<!-- <script type="text/javascript">
+  g2 = new Dygraph(
+
+    // containing div
+    document.getElementById("graph2div"),
+
+    // CSV or path to a CSV file.
+    "data/JanOne_windspeed.csv",
     
     {
     showRangeSelector: true
     }
 
   );
-</script>
+</script> -->
 
 	  </div>
 	</div>
