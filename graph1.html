@@ -70,11 +70,28 @@
     "data/feb_humidity_2stations.csv",
     
     {
-    showRangeSelector: true
+    showRangeSelector: true,
+    connectSeperatedPoints: true,
+//Check box for multiple columns of data
+    visibility:[true,true]
     }
 
   );
+
+  function change(el){
+    g2.setVisibility(parseInt(el.id), el.checked);
+    }
 </script>
+
+<!--Labels for checkbox-->
+<p>
+<input type="checkbox" id="0" onclick="change(this)">
+<label for="0"> Station 1</label>
+<br>
+<input type="checkbox" id="1" checked onclick="change(this)">
+<label for="1"> Station 2</label>
+<p>
+
 
   <p id="graph2">
   An Example of a Monthly Plot
