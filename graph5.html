@@ -12,13 +12,11 @@
   <link rel="stylesheet" src="dygraph.css" />
 </head>
 
-
 <body>
 
 <div id="container"> <!-- <DIV #1> -->
 
 <!--<a href="https://VeronicaAM.github.io"><img src="images/banner.jpg" width="100%" /></a><br />-->
-
 
 	<div id="header"> <!-- <DIV #2> -->
 		<h1><a href="index.html"><font color='black'>Title</font></a></h1><br />
@@ -52,14 +50,15 @@
 			<li><a href="graph1.html">Humidity</a></li>
             <li><a href="graph2.html">Temperature</a></li>
 			<li><a href="graph3.html">Pressure</a></li>
-			<li><a href="graph4.html">Wind Direction</a></li>
+			<li><a href="graph4.html">Wind Speed</a></li>
+            <li><a href="graph5.html">Wind Direction</a></li>
+            <li><a href="graph6.html">Radiation</a></li>
+            <li><a href="graph7.html">Snow Height</a></li>
 			<li><a href="an_explanatory_page.html">Data Source</a></li>
 			<li><a href="contact.html">Contact</a></li>
 			</ul>
 		</div>
 
-
-        
   <p id="graph2">
   An Example of a Monthly Plot
   </p>
@@ -71,7 +70,7 @@
     document.getElementById("graph2div"),
 
     // CSV or path to a CSV file.
-    "data/JanOne_temperature.csv",
+    "data/JanOne_wind_direction.csv",
     
     {
     showRangeSelector: true
