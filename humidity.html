@@ -41,62 +41,62 @@
 		</div>
         
           <p id="graph2">
-  An Example Plot comparing both stations
-  </p>
+            An Example Plot comparing both stations
+          </p>
 	  	  <div id="graphdiv"></div>
-<script type="text/javascript">
-  g = new Dygraph(
+        <script type="text/javascript">
+          g = new Dygraph(
 
-    // containing div
-    document.getElementById("graphdiv"),
+            // containing div
+            document.getElementById("graphdiv"),
 
-    // CSV or path to a CSV file.
-    "data/humidity.csv",
-    
-    {
-    showRangeSelector: true,
-    connectSeparatedPoints: true,
-//Check box for multiple columns of data
-    visibility:[true,true],
-//average nearest points to close data gaps 
-    //rollPeriod:3
-    }
+            // CSV or path to a CSV file.
+            "data/humidity.csv",
+            
+            {
+            showRangeSelector: true,
+            connectSeparatedPoints: true,
+        //Check box for multiple columns of data
+            visibility:[true,true],
+        //average nearest points to close data gaps 
+            //rollPeriod:3
+            }
 
-  );
+          );
 
-  function change(el){
-    g.setVisibility(parseInt(el.id), el.checked);
-    }
-</script>
+          function change(el){
+            g.setVisibility(parseInt(el.id), el.checked);
+            }
+        </script>
 
-<!--Labels for checkbox-->
-<p>
-<input type="checkbox" id="0" checked onclick="change(this)">
-<label for="0"> Station 1</label>
-<br>
-<input type="checkbox" id="1" checked onclick="change(this)">
-<label for="1"> Station 2</label>
-<p>
+        <!--Labels for checkbox-->
+        <p>
+        <input type="checkbox" id="0" checked onclick="change(this)">
+        <label for="0"> Station 1</label>
+        <br>
+        <input type="checkbox" id="1" checked onclick="change(this)">
+        <label for="1"> Station 2</label>
+        <p>
 
 
-  <p id="graph2">
-  An Example of a Monthly Plot
-  </p>
-  <div id="graph2div"></div>
-<script type="text/javascript">
-  g2 = new Dygraph(
+          <p id="graph2">
+          An Example of a Monthly Plot
+          </p>
+          <div id="graph2div"></div>
+        <script type="text/javascript">
+          g2 = new Dygraph(
 
-    // containing div
-    document.getElementById("graph2div"),
+            // containing div
+            document.getElementById("graph2div"),
 
-    // CSV or path to a CSV file.
-    "data/JanOne_humidity.csv",
-    
-    {
-    showRangeSelector: true
-    }
+            // CSV or path to a CSV file.
+            "data/JanOne_humidity.csv",
+            
+            {
+            showRangeSelector: true
+            }
 
-  );
+          );
 </script>
 
 	  </div>
