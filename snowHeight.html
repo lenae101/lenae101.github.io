@@ -48,19 +48,28 @@
   </p>
   <div id="graph2div"></div>
 <script type="text/javascript">
-  g2 = new Dygraph(
+  g = new Dygraph(
 
     // containing div
     document.getElementById("graph2div"),
 
     // CSV or path to a CSV file.
-    "data/JanOne_snow_height.csv",
+    "data/snowheight.csv",
     
     {
-    showRangeSelector: true
+    showRangeSelector: true,    
+    connectSeparatedPoints: true,
+//Check box for multiple columns of data
+    visibility:[true,true],
+//average nearest points to close data gaps 
+    //rollPeriod:3
     }
 
   );
+
+  function change(el){
+    g.setVisibility(parseInt(el.id), el.checked);
+  }
 </script>
 
 	  </div>

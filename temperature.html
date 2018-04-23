@@ -73,13 +73,22 @@
     document.getElementById("graph2div"),
 
     // CSV or path to a CSV file.
-    "data/JanOne_temperature.csv",
+    "data/temperature.csv",
     
     {
     showRangeSelector: true
+    connectSeparatedPoints: true,
+//Check box for multiple columns of data
+    visibility:[true,true],
+//average nearest points to close data gaps 
+    //rollPeriod:3
     }
 
   );
+
+  function change(el){
+    g.setVisibility(parseInt(el.id), el.checked);
+  }
 </script>
 
 	  </div>
