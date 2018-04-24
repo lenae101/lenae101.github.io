@@ -8,22 +8,18 @@
   <link href="oswd2.css" rel="stylesheet" type="text/css" title="OSWD2 Style" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script type="text/javascript" src="dygraph.js"></script>
-  <link rel="stylesheet" src="dygraph.css" />
 </head>
 
 <body>
 
 <div id="container"> <!-- <DIV #1> -->
 
-<!--<a href="https://VeronicaAM.github.io"><img src="images/banner.jpg" width="100%" /></a><br />-->
+<!--<a href="https://VeronicaAM.github.io"><img src="images/banner.jpg" width='100%'/></a><br />-->
 
 	<div id="header"> <!-- <DIV #2> -->
 		<h1><a href="index.html"><font color='black'>Title</font></a></h1><br />
 		<h2><font color='black'>Subtitle</font></h2>
 	</div>
-    
-    
 
 	<div id="core_container"> <!-- <DIV #3> -->
 	  <div id="core_left"> <!-- <DIV #4> -->
@@ -33,7 +29,7 @@
             <a href="temperature.html">Temperature</a> <br/> <br/>
             <a href="pressure.html">Pressure</a> <br/><br/>
             <a href="windSpeed.html">Wind Speed</a> <br/> <br/>
-            <a href="windDirection.html" id="current" >Wind Direction</a> <br/> <br/>
+            <a href="windDirection.html">Wind Direction</a> <br/> <br/>
             <a href="radiation">Radiation</a> <br/> <br/>
             <a href="snowHeight">Snow Height</a> <br/> <br/>
             </p>
@@ -44,60 +40,40 @@
 			<br/>
 			<br/>
 			<br/>
-            
-      </div>
+	  </div>
 
 	  <div id="core_right"> <!-- <DIV #5> -->
 		<div id="navcontainer">
 			<ul id="navlist">
 			<li><a href="index.html">Home</a></li>
 			<li><a href="instrumentation.html">Instrumentation</a></li>
-            <li><a href="photoGallery.html">Photo Gallery</a></li>
+            <li><a href="photoGallery.html"id="current">Photo Gallery</a></li>
             <li><a href="moreInfo.html">More Information</a></li>
 			</ul>
 		</div>
 
-  <p id="graph2">
-  RM Young Resultant Wind Direction Data
-  </p>
-  <div id="graph2div"></div>
-<script type="text/javascript">
-  g2 = new Dygraph(
+	  	<h5>Contact</h5>
+			<p>
+          For questions, contact Jan Lenaerts <br />
+          Assistant Professor
+ATMOSPHERIC AND OCEANIC SCIENCES <br />
+ Jan.Lenaerts@colorado.edu <br />
+Office address: SEEC N257, 4001 Discovery Dr., Boulder, CO 80309 <br />
+Mail address: 311 UCB, Boulder, CO 80309-0311
+          </p>
+          
+        <h5>Another section title</h5>
+            <p>
+          Add Text Here
+          </p>
+        
 
-    // containing div
-    document.getElementById("graph2div"),
 
-    // CSV or path to a CSV file.
-    "data/winddir.csv",
-    
-    {
-    showRangeSelector: true,
-    connectSeparatedPoints: true,
-//Check box for multiple columns of data
-    visibility:[true,true],
-//average nearest points to close data gaps 
-    //rollPeriod:3
-    }
-
-  );
-
-  function change(el){
-    g.setVisibility(parseInt(el.id), el.checked);
-  }
-</script>
-        <p>
-        <input type="checkbox" id="0" checked onclick="change(this)">
-        <label for="0"> Station 1</label>
-        <br>
-        <input type="checkbox" id="1" checked onclick="change(this)">
-        <label for="1"> Station 2</label>
-        <p>
 	  </div>
 	</div>
 	<div id="footer">
     <!--If there is a footer, put it here!-->   
     </div>
-</div>
 </div>
 </body>
 </html>
