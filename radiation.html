@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Generic Title</title>
+<title>Radiation</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="keywords" content="As Many, Relevant, Keywords, as you, can think of" />
   <meta name="description" content="A nice description of the page" />
@@ -15,8 +15,9 @@
 <body>
 
 <div id="container"> <!-- <DIV #1> -->
-<!--<a href="https://VeronicaAM.github.io"><img src="images/banner.jpg" width="100%" /></a><br />-->
 
+<!--Banner image/Title at top of page-->
+<!--<a href="https://VeronicaAM.github.io"><img src="images/banner.jpg" width="100%" /></a><br />-->
 <!-- 	<div id="header"> <!-- <DIV #2> -->
 <!--		<h1><a href="index.html"><font color='black'>Title</font></a></h1><br />
 		<h2><font color='black'>Subtitle</font></h2>
@@ -34,50 +35,9 @@
             <a href="radiation"id="current">Radiation</a> <br/> <br/>
             <a href="snowHeight">Snow Height</a> <br/> <br/>
             </p>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-       		<br/>
-			<br/>
-			<br/>
-			<br/>
-            <br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-       		<br/>
-			<br/>
-			<br/>
-			<br/>
-            <br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-       		<br/>
-			<br/>
-			<br/>
-			<br/>
 	  </div>
 
+      <!--Tabs at top of page-->
 	  <div id="core_right"> <!-- <DIV #5> -->
 		<div id="navcontainer">
 			<ul id="navlist">
@@ -92,6 +52,7 @@
   Radiation Up Data
   </p>
   <div id="graph1div"></div>
+  
 <!--Labels for checkbox-->
 <p>
 <input type="checkbox" id="0" checked onclick="changeg1(this)">
@@ -105,6 +66,7 @@
   Long Radiation Up Data
   </p>
   <div id="graph2div"></div>
+  
 <!--Labels for checkbox-->
 <p>
 <input type="checkbox" id="0" checked onclick="changeg2(this)">
@@ -118,6 +80,7 @@
   Radiation Down Data
   </p>
   <div id="graph3div"></div>
+  
 <!--Labels for checkbox-->
 <p>
 <input type="checkbox" id="0" checked onclick="changeg3(this)">
@@ -131,6 +94,7 @@
   Long Radiation Down Data
   </p>
   <div id="graph4div"></div>
+  
   <!--Labels for checkbox-->
 <p>
 <input type="checkbox" id="0" checked onclick="changeg4(this)">
@@ -139,6 +103,8 @@
 <input type="checkbox" id="1" checked onclick="changeg4(this)">
 <label for="1">Station 2</label>
 </p>
+
+<!--GRAPHS-->
 <script type="text/javascript">
   g1 = new Dygraph(
 
@@ -220,10 +186,6 @@
     g4.setVisibility(parseInt(el.id), el.checked);
     }
 </script>
-
-
-
-
 
 
 	  </div>

@@ -61,7 +61,7 @@ body {
 	padding: 12px;
 	_padding: 6px;
 	height: auto;
-	background-color: #FFFFFF;		border-right: 1px solid #DEDEDE;
+	background-color: #FFFFFF;		/*border-right: 1px solid #DEDEDE;*/
 }
 	#core_left img {
 		border: 0;
@@ -110,6 +110,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #FFFFFF;
+    border-left: 1px solid #DEDEDE;
 }
 	#core_right h5, #core_right h6 {
 		position: relative;
