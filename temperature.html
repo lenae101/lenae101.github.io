@@ -53,32 +53,9 @@
   <p id="graph2">
   RTD Average Upper Temperature (C)
   </p>
-  <div id="graph2div"></div>
-<script type="text/javascript">
-  g2 = new Dygraph(
-
-    // containing div
-    document.getElementById("graph2div"),
-
-    // CSV or path to a CSV file.
-    "data/temperature.csv",
-    
-    {
-    showRangeSelector: true,
-    connectSeparatedPoints: true,
-//Check box for multiple columns of data
-    visibility:[true,true],
-//average nearest points to close data gaps 
-    //rollPeriod:3
-    }
-
-  );
-
-  function change(el){
-    g2.setVisibility(parseInt(el.id), el.checked);
-  }
-</script>
+  <div id="graph2div" style="width:100%;"></div>
         <p>
+        <div id="legend" style="float:right;"></div>
         <input type="checkbox" id="0" checked onclick="change(this)">
         <label for="0"> Station 1</label>
         <br>
@@ -93,4 +70,31 @@
     </div>
 </div>
 </body>
+<script type="text/javascript">
+  g2 = new Dygraph(
+
+    // containing div
+    document.getElementById("graph2div"),
+
+    // CSV or path to a CSV file.
+    "data/temperature.csv",
+    
+    {
+    showRangeSelector: true,
+    connectSeparatedPoints: true,
+//Check box for multiple columns of data
+    visibility:[true,true],
+    labelsDiv: document.getElementById("legend4"),
+    labelsSeparateLines: true,
+    hideOverlayOnMouseOut: false
+//average nearest points to close data gaps 
+    //rollPeriod:3
+    }
+
+  );
+
+  function change(el){
+    g2.setVisibility(parseInt(el.id), el.checked);
+  }
+</script>
 </html>

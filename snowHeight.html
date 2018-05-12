@@ -52,7 +52,22 @@
   <p id="graph2">
   Snow Height (m)
   </p>
-  <div id="graph2div"></div>
+  <div id="graph2div" style="width:100%;"></div>
+    <p>      
+    <div id="legend" style="float:right;"></div></p>
+        <input type="checkbox" id="0" checked onclick="change(this)">
+        <label for="0"> Station 1</label>
+        <br>
+        <input type="checkbox" id="1" checked onclick="change(this)">
+        <label for="1"> Station 2</label>
+        <p>
+	  </div>
+	</div>
+	<div id="footer">
+    <!--If there is a footer, put it here!-->   
+    </div>
+</div>
+</body>
 <script type="text/javascript">
   g = new Dygraph(
 
@@ -67,6 +82,9 @@
     connectSeparatedPoints: true,
 //Check box for multiple columns of data
     visibility:[true,true],
+    labelsDiv: document.getElementById("legend4"),
+    labelsSeparateLines: true,
+    hideOverlayOnMouseOut: false
 //average nearest points to close data gaps 
     //rollPeriod:3
     }
@@ -77,18 +95,5 @@
     g.setVisibility(parseInt(el.id), el.checked);
   }
 </script>
-<p>
-        <input type="checkbox" id="0" checked onclick="change(this)">
-        <label for="0"> Station 1</label>
-        <br>
-        <input type="checkbox" id="1" checked onclick="change(this)">
-        <label for="1"> Station 2</label>
-        <p>
-	  </div>
-	</div>
-	<div id="footer">
-    <!--If there is a footer, put it here!-->   
-    </div>
-</div>
-</body>
+
 </html>

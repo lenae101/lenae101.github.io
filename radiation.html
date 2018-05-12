@@ -51,10 +51,11 @@
   <p id="graph1">
   Radiation Up (w/m2)
   </p>
-  <div id="graph1div"></div>
+  <div id="graph1div" style="width:100%"></div>
   
 <!--Labels for checkbox-->
 <p>
+        <div id="legend1" style="float:right;"></div>
 <input type="checkbox" id="0" checked onclick="changeg1(this)">
 <label for="0">Station 1</label>
 <br>
@@ -65,10 +66,11 @@
   <p id="graph2">
   Long Radiation Up (w/m2)
   </p>
-  <div id="graph2div"></div>
+  <div id="graph2div" style="width:100%"></div>
   
 <!--Labels for checkbox-->
 <p>
+        <div id="legend2" style="float:right;"></div>
 <input type="checkbox" id="0" checked onclick="changeg2(this)">
 <label for="0">Station 1</label>
 <br>
@@ -79,10 +81,11 @@
   <p id="graph3">
   Radiation Down (w/m2)
   </p>
-  <div id="graph3div"></div>
+  <div id="graph3div" style="width:100%"></div>
   
 <!--Labels for checkbox-->
 <p>
+        <div id="legend3" style="float:right;"></div>
 <input type="checkbox" id="0" checked onclick="changeg3(this)">
 <label for="0">Station 1</label>
 <br>
@@ -93,10 +96,11 @@
   <p id="graph4">
   Long Radiation Down (w/m2)
   </p>
-  <div id="graph4div"></div>
+  <div id="graph4div" style="width:100%"></div>
   
-  <!--Labels for checkbox-->
+<!--Labels for checkbox-->
 <p>
+        <div id="legend2" style="float:right;"></div>
 <input type="checkbox" id="0" checked onclick="changeg4(this)">
 <label for="0">Station 1</label>
 <br>
@@ -104,6 +108,17 @@
 <label for="1">Station 2</label>
 </p>
 
+
+
+
+	  </div>
+	</div>
+	<div id="footer">
+    <!--If there is a footer, put it here!-->   
+    </div>
+</div>
+</div>
+</body>
 <!--GRAPHS-->
 <script type="text/javascript">
   g1 = new Dygraph(
@@ -118,6 +133,9 @@
     showRangeSelector: true,
     //Check box for multiple columns of data
     visibility:[true,true],
+    labelsDiv: document.getElementById("legend1"),
+    labelsSeparateLines: true,
+    hideOverlayOnMouseOut: false
     }
 
   );
@@ -138,6 +156,9 @@
     showRangeSelector: true,
     //Check box for multiple columns of data
     visibility:[true,true],
+    labelsDiv: document.getElementById("legend2"),
+    labelsSeparateLines: true,
+    hideOverlayOnMouseOut: false
     }
 
   );
@@ -158,6 +179,9 @@
     showRangeSelector: true,
     //Check box for multiple columns of data
     visibility:[true,true],
+    labelsDiv: document.getElementById("legend3"),
+    labelsSeparateLines: true,
+    hideOverlayOnMouseOut: false
     }
 
   );
@@ -178,6 +202,9 @@
     showRangeSelector: true,
     //Check box for multiple columns of data
     visibility:[true,true],
+    labelsDiv: document.getElementById("legend4"),
+    labelsSeparateLines: true,
+    hideOverlayOnMouseOut: false
     }
 
   );
@@ -186,15 +213,5 @@
     g4.setVisibility(parseInt(el.id), el.checked);
     }
 </script>
-
-
-	  </div>
-	</div>
-	<div id="footer">
-    <!--If there is a footer, put it here!-->   
-    </div>
-</div>
-</div>
-</body>
 </html>
 
