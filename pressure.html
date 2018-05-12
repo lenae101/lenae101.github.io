@@ -66,9 +66,8 @@
     connectSeparatedPoints: true,
 //Check box for multiple columns of data
     visibility:[true,true],
-    labelsDivStyles : {
-			'textAlign' : 'right'
-		}
+    labelsDiv: document.getElementById("legend"),
+    labelsSeparateLines: true
 //average nearest points to close data gaps 
     //rollPeriod:3
     }
@@ -87,6 +86,7 @@
         <label for="1"> Station 2</label>
         <p>
 	  </div>
+      <p><div id="legend"></div>
 	</div>
 	<div id="footer">
     <!--If there is a footer, put it here!-->   
