@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Generic Title</title>
+<title>Snow Height</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="keywords" content="As Many, Relevant, Keywords, as you, can think of" />
   <meta name="description" content="A nice description of the page" />
@@ -15,38 +15,59 @@
 <body>
 
 <div id="container"> <!-- <DIV #1> -->
-
+<!--Banner image/Title at top of page-->
 <!--<a href="https://VeronicaAM.github.io"><img src="images/banner.jpg" width="100%" /></a><br />-->
-
-	<div id="header"> <!-- <DIV #2> -->
-		<h1><a href="index.html"><font color='black'>Title</font></a></h1><br />
+<!-- 	<div id="header"> <!-- <DIV #2> -->
+<!--		<h1><a href="index.html"><font color='black'>Title</font></a></h1><br />
 		<h2><font color='black'>Subtitle</font></h2>
-	</div>
-
-
-
+	</div> -->
+   
+      
+	<div id="core_container"> <!-- <DIV #3> -->
+	  <div id="core_left"> <!-- <DIV #4> -->
+		  <h3>Observations</h3>
+			<p align="justify">
+            <a href="humidity.html">Humidity</a> <br/> <br/>
+            <a href="temperature.html">Temperature</a> <br/> <br/>
+            <a href="pressure.html">Pressure</a> <br/><br/>
+            <a href="windSpeed.html">Wind Speed</a> <br/> <br/>
+            <a href="windDirection.html">Wind Direction</a> <br/> <br/>
+            <a href="radiation">Radiation</a> <br/> <br/>
+            <a href="snowHeight"id="current">Snow Height</a> <br/> <br/>
+            </p>
 	  </div>
 
+      <!--TABS at top of page-->
 	  <div id="core_right"> <!-- <DIV #5> -->
 		<div id="navcontainer">
 			<ul id="navlist">
 			<li><a href="index.html">Home</a></li>
-			<li><a href="humidity.html">Humidity</a></li>
-            <li><a href="temperature.html">Temperature</a></li>
-			<li><a href="pressure.html">Pressure</a></li>
-			<li><a href="windSpeed.html">Wind Speed</a></li>
-            <li><a href="windDirection.html">Wind Direction</a></li>
-            <li><a href="radiation.html">Radiation</a></li>
-            <li><a href="snowHeight.html" id="current">Snow Height</a></li>
+			<li><a href="instrumentation.html">Instrumentation</a></li>
+            <li><a href="photoGallery.html">Photo Gallery</a></li>
             <li><a href="moreInfo.html">More Information</a></li>
 			</ul>
 		</div>
 
-
+<!--GRAPH-->
   <p id="graph2">
-  An Example of a Monthly Plot
+  Snow Height (m)
   </p>
-  <div id="graph2div"></div>
+  <div id="graph2div" style="width:100%;"></div>
+    <p>      
+    <div id="legend" style="float:right;"></div></p>
+        <input type="checkbox" id="0" checked onclick="change(this)">
+        <label for="0"> Station 1</label>
+        <br>
+        <input type="checkbox" id="1" checked onclick="change(this)">
+        <label for="1"> Station 2</label>
+        <p>
+	  </div>
+	</div>
+	<div id="footer">
+    <!--If there is a footer, put it here!-->   
+    </div>
+</div>
+</body>
 <script type="text/javascript">
   g = new Dygraph(
 
@@ -61,6 +82,9 @@
     connectSeparatedPoints: true,
 //Check box for multiple columns of data
     visibility:[true,true],
+    labelsDiv: document.getElementById("legend"),
+    labelsSeparateLines: true,
+    hideOverlayOnMouseOut: false
 //average nearest points to close data gaps 
     //rollPeriod:3
     }
@@ -71,18 +95,5 @@
     g.setVisibility(parseInt(el.id), el.checked);
   }
 </script>
-<p>
-        <input type="checkbox" id="0" checked onclick="change(this)">
-        <label for="0"> Station 1</label>
-        <br>
-        <input type="checkbox" id="1" checked onclick="change(this)">
-        <label for="1"> Station 2</label>
-        <p>
-	  </div>
-	</div>
-	<div id="footer">
-    <!--If there is a footer, put it here!-->   
-    </div>
-</div>
-</body>
+
 </html>

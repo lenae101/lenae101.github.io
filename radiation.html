@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Generic Title</title>
+<title>Radiation</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="keywords" content="As Many, Relevant, Keywords, as you, can think of" />
   <meta name="description" content="A nice description of the page" />
@@ -15,72 +15,100 @@
 <body>
 
 <div id="container"> <!-- <DIV #1> -->
+
+<!--Banner image/Title at top of page-->
 <!--<a href="https://VeronicaAM.github.io"><img src="images/banner.jpg" width="100%" /></a><br />-->
-
-	<div id="header"> <!-- <DIV #2> -->
-		<h1><a href="index.html"><font color='black'>Title</font></a></h1><br />
+<!-- 	<div id="header"> <!-- <DIV #2> -->
+<!--		<h1><a href="index.html"><font color='black'>Title</font></a></h1><br />
 		<h2><font color='black'>Subtitle</font></h2>
-	</div>
+	</div> -->
 
-
-
+	<div id="core_container"> <!-- <DIV #3> -->
+	  <div id="core_left"> <!-- <DIV #4> -->
+		  <h3>Observations</h3>
+			<p align="justify">
+            <a href="humidity.html">Humidity</a> <br/> <br/>
+            <a href="temperature.html">Temperature</a> <br/> <br/>
+            <a href="pressure.html">Pressure</a> <br/><br/>
+            <a href="windSpeed.html">Wind Speed</a> <br/> <br/>
+            <a href="windDirection.html">Wind Direction</a> <br/> <br/>
+            <a href="radiation"id="current">Radiation</a> <br/> <br/>
+            <a href="snowHeight">Snow Height</a> <br/> <br/>
+            </p>
 	  </div>
 
+      <!--Tabs at top of page-->
 	  <div id="core_right"> <!-- <DIV #5> -->
 		<div id="navcontainer">
 			<ul id="navlist">
 			<li><a href="index.html">Home</a></li>
-			<li><a href="humidity.html">Humidity</a></li>
-            <li><a href="temperature.html">Temperature</a></li>
-			<li><a href="pressure.html">Pressure</a></li>
-			<li><a href="windSpeed.html">Wind Speed</a></li>
-            <li><a href="windDirection.html">Wind Direction</a></li>
-            <li><a href="radiation.html" id="current">Radiation</a></li>
-            <li><a href="snowHeight.html">Snow Height</a></li>
+			<li><a href="instrumentation.html">Instrumentation</a></li>
+            <li><a href="photoGallery.html">Photo Gallery</a></li>
             <li><a href="moreInfo.html">More Information</a></li>
 			</ul>
 		</div>
 
-  <p id="graph2">
-  An Example of a Monthly Plot with Multiple Data Columns (radiation)
+  <p id="graph1">
+  Radiation Up (w/m2)
   </p>
-  <div id="graph2div"></div>
-<script type="text/javascript">
-  g2 = new Dygraph(
-
-    // containing div
-    document.getElementById("graph2div"),
-
-    // CSV or path to a CSV file.
-    "data/JanOne_radiation.csv",
-    
-    {
-    showRangeSelector: true,
-    //Check box for multiple columns of data
-    visibility:[true,true],
-    }
-
-  );
-
-  function change(el){
-    g2.setVisibility(parseInt(el.id), el.checked);
-    }
-</script>
-
+  <div id="graph1div" style="width:100%"></div>
+  
 <!--Labels for checkbox-->
 <p>
-<input type="checkbox" id="0" onclick="change(this)">
-<label for="0"> Average Solar Radiation Upward (w/m2)</label>
+        <div id="legend1" style="float:right;"></div>
+<input type="checkbox" id="0" checked onclick="changeg1(this)">
+<label for="0">Station 1</label>
 <br>
-<input type="checkbox" id="1" checked onclick="change(this)">
-<label for="1"> Average Solar Radiation Downward (w/m2)</label>
-<br>
-<input type="checkbox" id="1" checked onclick="change(this)">
-<label for="1"> Average Longwave Radiation Upward (w/m2)</label>
-<br>
-<input type="checkbox" id="1" checked onclick="change(this)">
-<label for="1"> Average Longwave Radiation Downward (w/m2)</label>
+<input type="checkbox" id="1" checked onclick="changeg1(this)">
+<label for="1">Station 2</label>
+</p>
+
+  <p id="graph2">
+  Long Radiation Up (w/m2)
+  </p>
+  <div id="graph2div" style="width:100%"></div>
+  
+<!--Labels for checkbox-->
 <p>
+        <div id="legend2" style="float:right;"></div>
+<input type="checkbox" id="0" checked onclick="changeg2(this)">
+<label for="0">Station 1</label>
+<br>
+<input type="checkbox" id="1" checked onclick="changeg2(this)">
+<label for="1">Station 2</label>
+</p>
+
+  <p id="graph3">
+  Radiation Down (w/m2)
+  </p>
+  <div id="graph3div" style="width:100%"></div>
+  
+<!--Labels for checkbox-->
+<p>
+        <div id="legend3" style="float:right;"></div>
+<input type="checkbox" id="0" checked onclick="changeg3(this)">
+<label for="0">Station 1</label>
+<br>
+<input type="checkbox" id="1" checked onclick="changeg3(this)">
+<label for="1">Station 2</label>
+</p>
+
+  <p id="graph4">
+  Long Radiation Down (w/m2)
+  </p>
+  <div id="graph4div" style="width:100%"></div>
+  
+<!--Labels for checkbox-->
+<p>
+        <div id="legend4" style="float:right;"></div>
+<input type="checkbox" id="0" checked onclick="changeg4(this)">
+<label for="0">Station 1</label>
+<br>
+<input type="checkbox" id="1" checked onclick="changeg4(this)">
+<label for="1">Station 2</label>
+</p>
+
+
 
 
 	  </div>
@@ -89,6 +117,101 @@
     <!--If there is a footer, put it here!-->   
     </div>
 </div>
+</div>
 </body>
+<!--GRAPHS-->
+<script type="text/javascript">
+  g1 = new Dygraph(
+
+    // containing div
+    document.getElementById("graph1div"),
+
+    // CSV or path to a CSV file.
+    "data/radiation_up.csv",
+    
+    {
+    showRangeSelector: true,
+    //Check box for multiple columns of data
+    visibility:[true,true],
+    labelsDiv: document.getElementById("legend1"),
+    labelsSeparateLines: true,
+    hideOverlayOnMouseOut: false
+    }
+
+  );
+
+  function changeg1(el){
+    g1.setVisibility(parseInt(el.id), el.checked);
+    }
+    
+  g2 = new Dygraph(
+
+    // containing div
+    document.getElementById("graph2div"),
+
+    // CSV or path to a CSV file.
+    "data/long_radiation_up.csv",
+    
+    {
+    showRangeSelector: true,
+    //Check box for multiple columns of data
+    visibility:[true,true],
+    labelsDiv: document.getElementById("legend2"),
+    labelsSeparateLines: true,
+    hideOverlayOnMouseOut: false
+    }
+
+  );
+
+  function changeg2(el){
+    g2.setVisibility(parseInt(el.id), el.checked);
+    }
+    
+  g3 = new Dygraph(
+
+    // containing div
+    document.getElementById("graph3div"),
+
+    // CSV or path to a CSV file.
+    "data/radiation_down.csv",
+    
+    {
+    showRangeSelector: true,
+    //Check box for multiple columns of data
+    visibility:[true,true],
+    labelsDiv: document.getElementById("legend3"),
+    labelsSeparateLines: true,
+    hideOverlayOnMouseOut: false
+    }
+
+  );
+
+  function changeg3(el){
+    g3.setVisibility(parseInt(el.id), el.checked);
+    }
+    
+  g4 = new Dygraph(
+
+    // containing div
+    document.getElementById("graph4div"),
+
+    // CSV or path to a CSV file.
+    "data/long_radiation_down.csv",
+    
+    {
+    showRangeSelector: true,
+    //Check box for multiple columns of data
+    visibility:[true,true],
+    labelsDiv: document.getElementById("legend4"),
+    labelsSeparateLines: true,
+    hideOverlayOnMouseOut: false
+    }
+
+  );
+
+  function changeg4(el){
+    g4.setVisibility(parseInt(el.id), el.checked);
+    }
+</script>
 </html>
 
